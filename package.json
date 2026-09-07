@@ -1,0 +1,31 @@
+{
+  "name": "gestortrafego",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Gestor de tráfego Começa AI — Cloudflare Workers edge",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit && eslint src",
+    "cf-typegen": "wrangler types",
+    "db:migrate:local": "wrangler d1 migrations apply gestortrafego --local",
+    "db:migrate": "wrangler d1 migrations apply gestortrafego --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250905.0",
+    "@types/node": "^22.17.2",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.41.0",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.33.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.9"
+}
