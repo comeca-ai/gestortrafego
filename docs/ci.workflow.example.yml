@@ -1,0 +1,29 @@
+# Cole como `.github/workflows/ci.yml` (token atual sem scope `workflow`)
+# name: ci
+#
+# on:
+#   pull_request:
+#     branches: [main]
+#   push:
+#     branches: [scaffold/v2, main]
+#
+# jobs:
+#   check:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: pnpm/action-setup@v4
+#         with:
+#           version: 9
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#           cache: pnpm
+#       - run: pnpm install --frozen-lockfile=false
+#       - run: pnpm exec tsc --noEmit && pnpm exec eslint src
+#       - run: pnpm test
+#       - run: pnpm build
+
+name: reference-only
+# Este arquivo NÃO é um workflow ativo. Conteúdo canônico abaixo para colar em
+# `.github/workflows/ci.yml` via UI do GitHub (precisa scope workflow no token).
